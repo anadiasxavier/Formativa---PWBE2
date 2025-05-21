@@ -18,41 +18,42 @@ No Projeto em settings.py é onde fica as configurações do seu banco de dados,
 
 # Preparando o Projeto
 **1.** Clone o repositório do projeto:
-git clone https://github.com/seu-usuario/seu-repositorio.git
-Substitua o link acima pelo link real do seu repositório no GitHub.
+git clone https://github.com/anadiasxavier/Formativa---PWBE2.git
 
-2. Acesse a pasta do projeto pelo terminal:
+**2.** Acesse a pasta do projeto pelo terminal:
 
-bash
-Copiar
-Editar
-cd nome-da-pasta-do-projeto
+cd Formativa---PWBE2
 
-**1.** Abra o projeto no Visual Studio Code.
+cd formativa
 
-**2.** Acesse o terminal (atalho: Ctrl + J ou vá em Terminal > Novo Terminal).
+**3.** Abra o projeto no Visual Studio Code.
 
-**3.** Crie um ambiente virtual:
+ code .
+ 
+**4.** Acesse o terminal (atalho: Ctrl + J ou vá em Terminal > Novo Terminal).
+
+**5.** Crie um ambiente virtual:
 
 python -m venv venv
 
-**4.** Ative o ambiente virtual:
+**6.** Ative o ambiente virtual:
 
 .\venv\Scripts\activate
 
-**5.** Instale as dependências do projeto:
+**7.** Instale as dependências do projeto:
 
 pip install -r requirements.txt
 
-**6.** Com o banco já criado, aplique as migrações:
+**8.** Com o banco já criado, aplique as migrações:
 
 python manage.py makemigrations
+
 python manage.py migrate
 
-**7.** Crie um superusuário para acessar o painel administrativo:
+**9.** Crie um superusuário para acessar o painel administrativo:
 
 python manage.py createsuperuser
 
-**8.**  Por fim, inicie o servidor:
+**10.**  Por fim, inicie o servidor:
 
 python manage.py runserver
