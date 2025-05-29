@@ -7,7 +7,7 @@ class Usuario(AbstractUser):
         ('P', 'Professor'),
     ]
 
-    tipo = models.CharField(max_length= 1, choices=TIPO_CHOICES, default='P')
+    tipo = models.CharField(max_length= 1, choices=TIPO_CHOICES, default='')
     ni = models.IntegerField(unique=True)
     telefone = models.CharField(max_length=20,  null=True, blank=True, default='')
     data_nascimento = models.DateField()
@@ -21,7 +21,7 @@ class Usuario(AbstractUser):
 class Disciplina(models.Model):
     nome = models.CharField(max_length=100)
     curso = models.CharField(max_length=100)
-    carga_horaria = models.IntegerField()
+    carga_hora = models.IntegerField(default='')
     descricao = models.TextField(blank=True, null=True)
     professor = models.ForeignKey(Usuario, on_delete=models.SET_NULL, null=True, blank=True, limit_choices_to={'tipo': 'P'})
 
