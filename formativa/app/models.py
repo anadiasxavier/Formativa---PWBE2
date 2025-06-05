@@ -21,7 +21,7 @@ class Usuario(AbstractUser):
 class Disciplina(models.Model):
     nome = models.CharField(max_length=100)
     curso = models.CharField(max_length=100)
-    carga_hora = models.IntegerField(default='')
+    carga_hora = models.IntegerField(default=0)
     descricao = models.TextField(blank=True, null=True)
     professor = models.ForeignKey(Usuario, on_delete=models.SET_NULL, null=True, blank=True, limit_choices_to={'tipo': 'P'})
 

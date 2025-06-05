@@ -99,7 +99,7 @@ DATABASES = {
         'NAME': 'cadastro',
         'USER': 'root',
         'HOST': 'localhost',
-        'PASSWORD':'senai',
+        'PASSWORD':'root',
         'PORT': '3306'
     }
 }
