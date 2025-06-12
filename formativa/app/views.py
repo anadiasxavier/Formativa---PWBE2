@@ -52,14 +52,14 @@ class DisciplinaListCreate(ListCreateAPIView):
     def perform_create(self, serializer):
         nome = serializer.validated_data['nome']
         curso = serializer.validated_data['curso']
-        carga_horaria = serializer.validated_data['carga_horaria']
+        carga_hora = serializer.validated_data['carga_hora']
         descricao = serializer.validated_data['descricao']
    
 
         reservas_existentes = Disciplina.objects.filter(
             nome=nome,
             curso=curso,
-            carga_horaria=carga_horaria,
+            carga_hora=carga_hora,
             descricao= descricao
         )
 

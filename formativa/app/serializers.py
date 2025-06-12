@@ -34,12 +34,12 @@ class DisciplinaSerializer (serializers.ModelSerializer):
         fields = '__all__'
     
     # Mensagem de erro para caso o usuario crie a disciplina com dados errado
-    def is_valid(self, *, raise_exception=False):
-        try:
-            super().is_valid(raise_exception=raise_exception)
-            super().save()
-        except Exception as e:
-            raise serializers.ValidationError({"Erro ao criar sala, verifique os dados enviados."})
+    # def is_valid(self, *, raise_exception=False):
+    #     try:
+    #         super().is_valid(raise_exception=raise_exception)
+    #         super().save()
+    #     except Exception as e:
+    #         raise serializers.ValidationError({"Erro ao criar sala, verifique os dados enviados."})
 
 
 class ReservaAmbienteSerializer(serializers.ModelSerializer):

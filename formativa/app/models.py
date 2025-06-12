@@ -24,7 +24,7 @@ class Disciplina(models.Model):
     carga_hora = models.IntegerField(default=0)
     descricao = models.TextField(blank=True, null=True)
     professor = models.ForeignKey(Usuario, on_delete=models.SET_NULL, null=True, blank=True, limit_choices_to={'tipo': 'P'})
-
+\
     def __str__(self):
         return self.nome
     
