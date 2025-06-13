@@ -15,7 +15,8 @@ class UsuarioListCreat (ListCreateAPIView):
     queryset = Usuario.objects.all()
     serializer_class = UsuarioSerializer
     permission_classes = [IsGestor]
-
+    def perform_create(self, serializer):
+        serializer.save()
     
 
 # Class que ira deletar, visualizar um em expecifico  e atualixar
