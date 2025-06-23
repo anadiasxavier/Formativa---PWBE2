@@ -57,3 +57,13 @@ python manage.py createsuperuser
 **10.**  Por fim, inicie o servidor:
 
 python manage.py runserver
+
+
+# Resolver problema no banco 
+
+1° Apagar a pasta Pycache e Migrations 
+2° Se tiver criado o banco, apagar o banco com ```drop database cadastro```
+3° Criar o banco com ```create database cadastro```
+4° Rodar no python ```python manage.py makemigrations app```
+5° Rodar o migrate com ```python manage.py migrate```
+6° Ser feliz 😊
