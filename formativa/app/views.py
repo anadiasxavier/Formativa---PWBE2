@@ -67,7 +67,7 @@ class DisciplinaListCreate(ListCreateAPIView):
         if reservas_existentes.exists():
             raise ValidationError("Essa disciplina já existe.")
 
-        serializer.save(professor=self.request.user)
+        serializer.save()
 
 
 # Class que ira deletar, visualizar um em expecifico  e atualizar Disciplina
@@ -170,7 +170,7 @@ class ReservaAmbienteListCreate(ListCreateAPIView):
         if reservas_existentes.exists():
             raise ValidationError("Marque outro horario, esse já está em uso.")
 
-        serializer.save(professor=self.request.user)
+        serializer.save()
 
 #Class que ira deletar, visualizar um em expecifico  e atualizar reserva de ambiente
 class ReservaAmbienteRetrieveUpdateDestroy(RetrieveUpdateDestroyAPIView):
